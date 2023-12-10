@@ -2,7 +2,7 @@ const { resolve } = require('node:path')
 const express = require('express')
 const next = require('next')
 
-const app = next({ dev: true, dir: resolve(__dirname, '.') })
+const app = next({ dev: true, dir: resolve(__dirname, '.'), customServer: true })
 const handler = app.getRequestHandler()
 
 app.prepare().then(() => {
